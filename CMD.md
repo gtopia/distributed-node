@@ -49,3 +49,8 @@ docker exec ephemeral /bin/ls /var
 
 curl -o index.html https://www.163.com
 docker run --rm -p 8080:80 -v $PWD/:/usr/share/nginx/html nginx
+
+docker build -t alan01/recipe-api:v0.0.1 .
+docker history alan01/recipe-api:v0.0.1
+
+docker-compose up
