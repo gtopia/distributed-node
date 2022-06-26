@@ -54,3 +54,16 @@ docker build -t alan01/recipe-api:v0.0.1 .
 docker history alan01/recipe-api:v0.0.1
 
 docker-compose up
+
+
+## 容器编排
+kubectl create deployment hello-minikube --image=k8s.gcr.io/echoserver:1.10
+kubectl get deployments
+kubectl get pods
+kubectl get rs
+
+kubectl expose deployment hello-minikube --type=NodePort --port=8080
+kubectl get services -o wide
+
+minikube service hello-minikube --url
+curl `minikube service hello-minikube --url`
