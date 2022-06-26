@@ -67,3 +67,10 @@ kubectl get services -o wide
 
 minikube service hello-minikube --url
 curl `minikube service hello-minikube --url`
+
+
+## 弹性
+docker run --name distnode-memcached -p 11211:11211 -it --rm memcached:1.6-alpine memcached -m 64 -vv
+
+docker run --name distnode-postgres -it --rm -p 5432:5432 -e POSTGRES_PASSWORD=hunter2 -e POSTGRES_USER=user -e POSTGRES_DB=dbconn postgres:12.3
+
