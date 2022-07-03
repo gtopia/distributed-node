@@ -74,3 +74,8 @@ docker run --name distnode-memcached -p 11211:11211 -it --rm memcached:1.6-alpin
 
 docker run --name distnode-postgres -it --rm -p 5432:5432 -e POSTGRES_PASSWORD=hunter2 -e POSTGRES_USER=user -e POSTGRES_DB=dbconn postgres:12.3
 
+
+## 分布式基元
+docker run -it --rm --name distnode-redis -p 6379:6379 redis:6.0.5-alpine
+docker exec -it distnode-redis redis-cli
+
